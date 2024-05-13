@@ -6,8 +6,8 @@ import { db } from "@/lib/firebase"
 import { collection, doc, getDoc, getDocs } from "firebase/firestore"
 
 const HomeScreen = () => {
-    const userId = localStorage.getItem('wisdombankprovider')
-    const programs = localStorage.getItem('program')
+  const userId = typeof window !== 'undefined' ? localStorage.getItem('wisdombankprovider') : null;
+    const programs = typeof window !== 'undefined' ? localStorage.getItem('program') : null;
     const [user, setUser] = useState()
     const [program, setprogram] = useState()
     const [books, setBooks] = useState([])

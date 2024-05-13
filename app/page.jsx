@@ -4,7 +4,7 @@ import LoginScreen from '@/components/screens/LoginScreen';
 import React from 'react'
 
 const page = () => {
-  const user = localStorage.getItem('wisdombankprovider')
+  const user = typeof window !== 'undefined' ? localStorage.getItem('wisdombankprovider') : null;
   if(user === null) return <LoginScreen />
 
   
