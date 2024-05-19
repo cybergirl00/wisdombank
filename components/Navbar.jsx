@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import Link from 'next/link'
 import { Button } from './ui/button'
 import { Input } from "@/components/ui/input"
 import { Search } from 'lucide-react'
@@ -29,7 +30,9 @@ const Navbar = () => {
                     <Search size={15}/>
                 </li>
                 <li className='flex  items-center gap-2'>
-                  {/* <Button>Add Past Question</Button> */}
+                  <Button asChild>
+                    <Link href={'/addform'}>Add Past Question</Link>
+                  </Button>
                     <Button variant="outline" className='text-primary'
                     onClick={handleLogout}
                     > Log Out</Button>
